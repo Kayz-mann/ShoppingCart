@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct AppetizerListView: View {
+    @StateObject var viewModel = AppetizerListViewModel()
     @State private var appetizers: [Appetizer] = []
     
     var body: some View {
         NavigationView {
-            List(appetizers, id: \.id) {
+            List(viewModel.appetizers, id: \.id) {
                 appetizer in
                 AppetizerListCell(appetizer: appetizer)
             }
@@ -21,26 +22,16 @@ struct AppetizerListView: View {
         }
         .onAppear {
             //sort of like an onscreen mount or load thing fetch data
-            getAppetizers()
+            viewModel.getAppetizers()
+        }
+        .alert(item: $viewModel.alertItem) { alertItem in
+            Alert(title: alertItem.title, 
+                  message: alertItem.message,
+                  dismissButton: alertItem.dismissButton)
         }
     }
     
-    func getAppetizers() {
-        NetworkManager.shared.getAppetizers{
-            result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let appetizers):
-                    //set data
-                    self.appetizers = appetizers
-                    print(appetizers)
-                case .failure(let error):
-                    print(error.localizedDescription)
-                }
-            }
- 
-        }
-    }
+    
 }
 
 struct AppetizerListView_Preview: PreviewProvider {
