@@ -26,6 +26,9 @@
 		0DE1B9BB2C3441E5003220BD /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1B9BA2C3441E5003220BD /* LoadingView.swift */; };
 		0DE1B9BD2C3444AC003220BD /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1B9BC2C3444AC003220BD /* Color+Ext.swift */; };
 		0DE1B9BF2C3584E5003220BD /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1B9BE2C3584E5003220BD /* RemoteImage.swift */; };
+		0DE1B9CE2C35A2C5003220BD /* AppetizerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1B9CD2C35A2C5003220BD /* AppetizerDetailView.swift */; };
+		0DE1B9D12C35D155003220BD /* APButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1B9D02C35D155003220BD /* APButton.swift */; };
+		0DE1B9D52C36AE45003220BD /* XDismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1B9D42C36AE45003220BD /* XDismiss.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,9 @@
 		0DE1B9BA2C3441E5003220BD /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		0DE1B9BC2C3444AC003220BD /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		0DE1B9BE2C3584E5003220BD /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		0DE1B9CD2C35A2C5003220BD /* AppetizerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerDetailView.swift; sourceTree = "<group>"; };
+		0DE1B9D02C35D155003220BD /* APButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APButton.swift; sourceTree = "<group>"; };
+		0DE1B9D42C36AE45003220BD /* XDismiss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismiss.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +176,7 @@
 			children = (
 				0DE1B9A82C32BE3F003220BD /* AppetizerListView.swift */,
 				0DE1B9B62C342A2C003220BD /* AppetizerListViewModel.swift */,
+				0DE1B9CD2C35A2C5003220BD /* AppetizerDetailView.swift */,
 			);
 			path = ListView;
 			sourceTree = "<group>";
@@ -236,6 +243,7 @@
 		0DE1B9C92C35A00A003220BD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0DE1B9CF2C35D144003220BD /* Buttons */,
 				0DE1B9CC2C35A042003220BD /* Images */,
 				0DE1B9CB2C35A028003220BD /* Cells */,
 				0DE1B9CA2C35A015003220BD /* UIKit Components */,
@@ -265,6 +273,15 @@
 				0DE1B9BE2C3584E5003220BD /* RemoteImage.swift */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		0DE1B9CF2C35D144003220BD /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				0DE1B9D02C35D155003220BD /* APButton.swift */,
+				0DE1B9D42C36AE45003220BD /* XDismiss.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,14 +420,17 @@
 				0DE1B9B72C342A2C003220BD /* AppetizerListViewModel.swift in Sources */,
 				0DE1B9BD2C3444AC003220BD /* Color+Ext.swift in Sources */,
 				0DE1B9AB2C32BE59003220BD /* AccountView.swift in Sources */,
+				0DE1B9D12C35D155003220BD /* APButton.swift in Sources */,
 				0DE1B9BB2C3441E5003220BD /* LoadingView.swift in Sources */,
 				0DE1B9812C32BAB9003220BD /* AppetizerTabView.swift in Sources */,
 				0DE1B9B32C337D17003220BD /* NetworkManager.swift in Sources */,
 				0DE1B9BF2C3584E5003220BD /* RemoteImage.swift in Sources */,
+				0DE1B9CE2C35A2C5003220BD /* AppetizerDetailView.swift in Sources */,
 				0DE1B97F2C32BAB9003220BD /* AppetizerApp.swift in Sources */,
 				0DE1B9B92C34327B003220BD /* Alert.swift in Sources */,
 				0DE1B9A92C32BE3F003220BD /* AppetizerListView.swift in Sources */,
 				0DE1B9AD2C32BE65003220BD /* OrderView.swift in Sources */,
+				0DE1B9D52C36AE45003220BD /* XDismiss.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,8 @@ import SwiftUI
 struct AppetizerListView: View {
     @StateObject var viewModel = AppetizerListViewModel()
     @State private var appetizers: [Appetizer] = []
+//    @State private var isShowingDetail = false
+//    @State private var selectedAppetizer: Appetizer?
     
     
     var body: some View {
@@ -18,17 +20,27 @@ struct AppetizerListView: View {
                 List(viewModel.appetizers, id: \.id) {
                     appetizer in
                     AppetizerListCell(appetizer: appetizer)
+                        .onTapGesture {
+                            viewModel.selectedAppetizer = appetizer
+                            viewModel.isShowingDetail = true
+                        }
                 }
+                //showing detail true? disable scroll
+                .disabled(viewModel.isShowingDetail)
                 .navigationTitle("Appetizers")
                 .background(Color.white.edgesIgnoringSafeArea(.all))
             }
             .onAppear {
                 //sort of like an onscreen mount or load thing fetch data
                 viewModel.getAppetizers()
-            }
+            }.blur(radius: viewModel.isShowingDetail ? 20 : 0)
             
             if viewModel.isLoading {
                 LoadingView()
+            }
+            
+            if viewModel.isShowingDetail {
+                AppetizerDetailView(appetizer: viewModel.selectedAppetizer ?? MockData.sampleAppetizer, isShowingDetail: $viewModel.isShowingDetail)
             }
         }
         .alert(item: $viewModel.alertItem) { alertItem in
