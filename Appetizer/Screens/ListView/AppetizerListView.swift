@@ -20,6 +20,7 @@ struct AppetizerListView: View {
                 List(viewModel.appetizers, id: \.id) {
                     appetizer in
                     AppetizerListCell(appetizer: appetizer)
+                        .listRowSeparator(.hidden) //hide border lines
                         .onTapGesture {
                             viewModel.selectedAppetizer = appetizer
                             viewModel.isShowingDetail = true
@@ -28,6 +29,7 @@ struct AppetizerListView: View {
                 //showing detail true? disable scroll
                 .disabled(viewModel.isShowingDetail)
                 .navigationTitle("Appetizers")
+                .listStyle(.plain)
                 .background(Color.white.edgesIgnoringSafeArea(.all))
             }
             .onAppear {
