@@ -32,10 +32,15 @@ struct AppetizerListView: View {
                 .listStyle(.plain)
                 .background(Color.white.edgesIgnoringSafeArea(.all))
             }
-            .onAppear {
-                //sort of like an onscreen mount or load thing fetch data
+//            .onAppear {
+//                //sort of like an onscreen mount or load thing fetch data
+//                viewModel.getAppetizers()
+//            }
+            .task {
+                //for making network call when view loads
                 viewModel.getAppetizers()
-            }.blur(radius: viewModel.isShowingDetail ? 20 : 0)
+            }
+            .blur(radius: viewModel.isShowingDetail ? 20 : 0)
             
             if viewModel.isLoading {
                 LoadingView()

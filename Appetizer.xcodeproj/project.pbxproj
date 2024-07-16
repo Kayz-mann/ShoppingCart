@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D301C912C447CA1002F1BC8 /* CustomModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D301C902C447CA1002F1BC8 /* CustomModifier.swift */; };
+		0D301C952C46C954002F1BC8 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D301C942C46C954002F1BC8 /* Date+Ext.swift */; };
 		0DE1B97F2C32BAB9003220BD /* AppetizerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1B97E2C32BAB9003220BD /* AppetizerApp.swift */; };
 		0DE1B9812C32BAB9003220BD /* AppetizerTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1B9802C32BAB9003220BD /* AppetizerTabView.swift */; };
 		0DE1B9832C32BABB003220BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DE1B9822C32BABB003220BD /* Assets.xcassets */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		0D301C902C447CA1002F1BC8 /* CustomModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifier.swift; sourceTree = "<group>"; };
+		0D301C942C46C954002F1BC8 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		0DE1B97B2C32BAB9003220BD /* Appetizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appetizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE1B97E2C32BAB9003220BD /* AppetizerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerApp.swift; sourceTree = "<group>"; };
 		0DE1B9802C32BAB9003220BD /* AppetizerTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerTabView.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 			children = (
 				0DE1B9BC2C3444AC003220BD /* Color+Ext.swift */,
 				0DE1B9DA2C36D80F003220BD /* String+Ext.swift */,
+				0D301C942C46C954002F1BC8 /* Date+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				0D301C912C447CA1002F1BC8 /* CustomModifier.swift in Sources */,
 				0DE1B9AF2C32CA01003220BD /* Appetizer.swift in Sources */,
 				0DE1B9B52C337EC9003220BD /* APError.swift in Sources */,
+				0D301C952C46C954002F1BC8 /* Date+Ext.swift in Sources */,
 				0DE1B9B12C337871003220BD /* AppetizerListCell.swift in Sources */,
 				0DE1B9B72C342A2C003220BD /* AppetizerListViewModel.swift in Sources */,
 				0DE1B9E62C371E30003220BD /* Order.swift in Sources */,

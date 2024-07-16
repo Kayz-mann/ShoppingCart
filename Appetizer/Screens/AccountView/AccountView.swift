@@ -40,7 +40,11 @@ struct AccountView: View {
                         .keyboardType(.emailAddress)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
-                    DatePicker("Birthday", selection: $viewModel.user.birthdate, displayedComponents: .date)
+                    DatePicker("Birthday", 
+                               selection: $viewModel.user.birthdate,
+                               //cannot enter a birth day younger than 18  years ago
+                               in: Date().oneHundredYearsAgo...Date().eighteenYearsAgo,
+                               displayedComponents: .date)
                     
                     Button {
                         viewModel.saveChanges() // Direct method call
